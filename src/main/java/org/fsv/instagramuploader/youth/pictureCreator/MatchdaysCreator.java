@@ -43,7 +43,7 @@ public class MatchdaysCreator {
 				blockStart = 530;
 				String savePathPart = h.createMatchdaysHead(matchDates);
 				String fileName = "Matchday" + pageCount;
-				h.savePicture("save/youth/" + savePathPart, background, fileName);
+				h.savePicture("src/main/resources/save/youth/" + savePathPart, background, fileName);
 				background = ImageIO.read(new File(tmpURL));
 				h = new Helper(background);
 				pageCount++;
@@ -65,7 +65,7 @@ public class MatchdaysCreator {
 		String savePathPart = h.createMatchdaysHead(matchDates);
 		fw.close();
 		String fileName = "Matchday" + pageCount;
-		h.savePicture("save/youth/" + savePathPart, background, fileName);
+		h.savePicture("src/main/resources/save/youth/" + savePathPart, background, fileName);
 		
 		Map<String, Integer> result = new HashMap<>();
 		result.put(savePathPart, pageCount);

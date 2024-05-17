@@ -32,7 +32,7 @@ public class ResultsCreator {
 			if (blockStart > 1100) {
 				blockStart = 500;
 				String savePathPart = h.createMatchdaysHead(matchDates);
-				h.savePicture("save/youth/" + savePathPart, background, "Result" + pageCount);
+				h.savePicture("src/main/resources/save/youth/" + savePathPart, background, "Result" + pageCount);
 				background = ImageIO.read(new File("src/main/resources/pictures/template/youth/resultTemp.jpg"));
 				h = new Helper(background);
 				pageCount++;
@@ -86,7 +86,7 @@ public class ResultsCreator {
 			h.deleteTempTxt(rm.id(), "youth-games");
 		}
 		String savePathPart = h.createMatchdaysHead(matchDates);
-		h.savePicture("save/youth/" + savePathPart, background, "Result" + pageCount);
+		h.savePicture("src/main/resources/save/youth/" + savePathPart, background, "Result" + pageCount);
 		
 		Map<String, Integer> result = new HashMap<>();
 		result.put(savePathPart, pageCount);

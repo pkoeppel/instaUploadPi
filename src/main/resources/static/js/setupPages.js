@@ -69,3 +69,16 @@ function loadMenMatches(type) {
             });
         });
 }
+
+function setCharCount() {
+  let charCount =
+        document.getElementById('matchResult').value.length +
+        document.getElementById('headline').value.length +
+        document.getElementById('report').value.length +
+        document.getElementById('reporterOpp').value.length +
+        document.getElementById('reportOpp').value.length +
+        document.getElementById('reporterOwn').value.length +
+        document.getElementById('reportOwn').value.length +
+        document.getElementById('future').value.length;
+   document.getElementById('chars').innerHTML = "Zeichen: " + charCount + "/2200";
+}

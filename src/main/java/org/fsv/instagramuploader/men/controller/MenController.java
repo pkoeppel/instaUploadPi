@@ -10,20 +10,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.http.*;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.MalformedURLException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
@@ -48,10 +41,10 @@ public class MenController {
 	
 	@GetMapping(value = "/zip-download/{dir}", produces = "application/zip")
 	public void zipDownload(@PathVariable String dir, HttpServletResponse res) throws IOException {
-		File directory = new File( "save/" + dir + "/Bilder/");
+		File directory = new File("src/main/resources/save/" + dir + "/Bilder/");
 		ZipOutputStream zipOS = new ZipOutputStream(res.getOutputStream());
 		for (String fn : Objects.requireNonNull(directory.list())){
-			FileSystemResource fsRes = new FileSystemResource("save/" + dir + "/Bilder/" + fn);
+			FileSystemResource fsRes = new FileSystemResource("src/main/resources/save/" + dir + "/Bilder/" + fn);
 			ZipEntry zip = new ZipEntry(Objects.requireNonNull(fsRes.getFilename()));
 			zip.setSize(fsRes.contentLength());
 			zipOS.putNextEntry(zip);
@@ -66,15 +59,12 @@ public class MenController {
 										.build()
 										.toString());
 	}
-	
-	@GetMapping("/download/{pathName}/{fileName:.+}")
-	public ResponseEntity<?> downloadLocalFile(@PathVariable String pathName, @PathVariable String fileName) throws MalformedURLException {
-		Path path = Paths.get("save/" + pathName + "/" + fileName);
-		Resource res = new UrlResource(path.toUri());
-		return ResponseEntity.ok()
-										.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + res.getFilename() + "\"")
-										.contentType(MediaType.parseMediaType("application/octet-stream"))
-										.body(res);
+
+	@SuppressWarnings("resource")
+	@GetMapping(value = "/download/{pathName}/{fileName:.+}", produces= MediaType.IMAGE_JPEG_VALUE)
+	public @ResponseBody byte[] downloadLocalFile(@PathVariable String pathName, @PathVariable String fileName) throws IOException {
+		InputStream is = new FileInputStream("src/main/resources/save/" + pathName + "/" + fileName);
+		return Objects.requireNonNull(is).readAllBytes();
 	}
 	
 	@RequestMapping("/createMatchMen")

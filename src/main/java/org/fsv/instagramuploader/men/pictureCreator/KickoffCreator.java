@@ -50,7 +50,7 @@ public class KickoffCreator {
 		String saveName = getClub.getClubDetails(mOpp).saveClubName();
 		
 		String savePath = date + "_" + mType + "_" + saveName;
-		h.savePicture("save/" + savePath, image, "Kickoff");
+		h.savePicture("src/main/resources/save/" + savePath, image, "Kickoff");
 		h.deleteTempTxt(m, "men-games-kickoff");
 		return savePath;
 	}

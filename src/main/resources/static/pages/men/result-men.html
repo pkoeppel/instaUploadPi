@@ -34,29 +34,31 @@
     </select>
     <br>
     <label for="matchResult">Ergebnis:</label>
-    <input type="text" id="matchResult" name="matchResult">
+    <input type="text" id="matchResult" name="matchResult" onkeyup="setCharCount()">
     <br>
     <label for="headline">Überschrift:</label>
-    <input type="text" id="headline" name="headline" maxlength="60">
+    <input type="text" id="headline" name="headline" onkeyup="setCharCount()">
     <br>
     <label for="report">Bericht:</label>
-    <textarea  id="report" name="report" maxlength="1000"></textarea>
+    <textarea  id="report" name="report" onkeyup="setCharCount()"></textarea>
     <br>
     <label>Stimmen zum Spiel:</label>
     <br>
     <label for="reporterOpp">Gegner:</label>
-    <input type="text" id="reporterOpp" name="reporterOpp">
+    <input type="text" id="reporterOpp" name="reporterOpp" onkeyup="setCharCount()">
     <br>
-    <label for="reportOpp"></label><textarea id="reportOpp" name="reportOpp" maxlength="400"></textarea>
+    <label for="reportOpp"></label><textarea id="reportOpp" name="reportOpp" onkeyup="setCharCount()"></textarea>
     <br>
     <label for="reporterOwn">Eigener:</label>
-    <input type="text" id="reporterOwn" name="reporterOwn">
+    <input type="text" id="reporterOwn" name="reporterOwn" onkeyup="setCharCount()">
     <br>
-    <label for="reportOwn"></label><textarea id="reportOwn" name="reportOwn" maxlength="400"></textarea>
+    <label for="reportOwn"></label><textarea id="reportOwn" name="reportOwn" onkeyup="setCharCount()"></textarea>
     <br>
     <label for="future">Ausblick:</label>
     <br>
-    <textarea id="future" name="future" maxlength="300"></textarea>
+    <textarea id="future" name="future" onkeyup="setCharCount()"></textarea>
+    <br>
+    <label id="chars">Zeichen: 0/2200</label>
     <br>
     <input accept="image/*" type="file" id="inputFile" onchange="newPicture()">
     <br>
@@ -154,9 +156,11 @@
                     })
                         .then(() => {
                             console.log('Success!');
+			    alert("Bild gespeichert!");
                         })
                         .catch((error) => {
                             console.error('Error: ', error);
+			    alert("Fehler! Bitte erneut probieren!");
                         });
                 }
             }

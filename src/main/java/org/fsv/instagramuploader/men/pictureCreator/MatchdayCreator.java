@@ -76,7 +76,7 @@ public class MatchdayCreator {
 		ClubSelector getClub = new ClubSelector();
 		String saveName = getClub.getClubDetails(match.opponent()).saveClubName();
 		String savePath = match.getSaveMatchDate() + "_" + match.getMatchType() + "_" + saveName;
-		h.savePicture("save/" + savePath, image, "Matchday");
+		h.savePicture("src/main/resources/save/" + savePath, image, "Matchday");
 		return savePath;
 	}
 	
@@ -136,7 +136,7 @@ public class MatchdayCreator {
 		h.writeOnPicture(homeTeam, "homeclub-men", FontClass.clubMen, Color.BLACK, startBox);
 		h.writeOnPicture(guestTeam, "awayclub-men", FontClass.clubMen, Color.BLACK, startBox);
 		
-		String bottomBox = match.matchDate() + " | " + match.matchTime() + " Uhr" + "\n" + gamePlace;
+		String bottomBox = match.matchDate() + " | " + match.matchTime() + " Uhr" + "\n" + Helper.wrapString(gamePlace, 30);
 		h.writeOnPicture(bottomBox, "bottom-men", FontClass.bottomMen, Color.BLACK, 1278);
 	}
 	

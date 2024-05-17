@@ -17,9 +17,9 @@
     "insta_acc": "1.fcrodewisch",
     "insta_acc2": ""
   },
-  "SG KÃ¼rbitz": {
+  "SG Kürbitz": {
     "fileName": "SG_Kuerbitz",
-    "place": "KÃ¼rbitz",
+    "place": "Kürbitz",
     "insta_acc": "sg_kuerbitz1897",
     "insta_acc2": ""
   },
@@ -35,10 +35,10 @@
     "insta_acc": "bce1919",
     "insta_acc2": ""
   },
-  "BSV 53 IrfersgrÃ¼n": {
+  "BSV 53 Irfersgrün": {
     "fileName": "BSV_53_Irfersgruen",
-    "place": "IrfersgrÃ¼n",
-    "insta_acc": "bsv_53_irfersgrÃ¼n_herren",
+    "place": "Irfersgrün",
+    "insta_acc": "bsv_53_irfersgrün_herren",
     "insta_acc2": "bsv_53_kids"
   },
   "Elsterberger BC": {
@@ -97,7 +97,7 @@
   },
   "PSV Plauen": {
     "fileName": "PSV_Plauen",
-    "place": "LuisenstraÃŸe",
+    "place": "Luisenstraße",
     "insta_acc": "post_sv_plauen",
     "insta_acc2": ""
   },
@@ -113,9 +113,9 @@
     "insta_acc": "sc_syrau",
     "insta_acc2": ""
   },
-  "SG JÃ¶ssnitz": {
+  "SG Jössnitz": {
     "fileName": "SG_Joessnitz",
-    "place": "JÃ¶ssnitz",
+    "place": "Jössnitz",
     "insta_acc": "sgj1951",
     "insta_acc2": ""
   },
@@ -167,7 +167,7 @@
     "insta_acc": "",
     "insta_acc2": ""
   },
-  "SpVgg GrÃ¼nbach-Falkenstein": {
+  "SpVgg Grünbach-Falkenstein": {
     "fileName": "SpVgg_Gruenbach-Falkenstein",
     "place": "Falkenstein",
     "insta_acc": "spvgg_gruenbach_falkenstein",
@@ -185,27 +185,27 @@
     "insta_acc": "sv08wildenau",
     "insta_acc2": ""
   },
-  "SV 1903 KottengrÃ¼n": {
+  "SV 1903 Kottengrün": {
     "fileName": "SV_1903_Kottengruen",
-    "place": "KottengrÃ¼n",
+    "place": "Kottengrün",
     "insta_acc": "svk1903",
     "insta_acc2": ""
   },
-  "SV Blau-Weiss RebesgrÃ¼n": {
+  "SV Blau-Weiss Rebesgrün": {
     "fileName": "SV_Blau-Weiss_Rebesgruen",
-    "place": "RebesgrÃ¼n",
-    "insta_acc": "sv_blau_weiss_rebesgrÃ¼n",
+    "place": "Rebesgrün",
+    "insta_acc": "sv_blau_weiss_rebesgrün",
     "insta_acc2": ""
   },
   "SV Concordia Plauen": {
     "fileName": "SV_Concordia_Plauen",
-    "place": "HegelstraÃŸe",
+    "place": "Hegelstraße",
     "insta_acc": "sv_concordia_plauen",
     "insta_acc2": ""
   },
-  "SV CoschÃ¼tz": {
+  "SV Coschütz": {
     "fileName": "SV_Coschuetz",
-    "place": "CoschÃ¼tz",
+    "place": "Coschütz",
     "insta_acc": "svcoschuetz1955",
     "insta_acc2": ""
   },
@@ -215,9 +215,9 @@
     "insta_acc": "sv_eintracht_auerbach",
     "insta_acc2": ""
   },
-  "SV GrÃ¼n-Weiss WernesgrÃ¼n": {
+  "SV Grün-Weiss Wernesgrün": {
     "fileName": "SV_Gruen-Weiss_Wernesgruen",
-    "place": "WernesgrÃ¼n",
+    "place": "Wernesgrün",
     "insta_acc": "svwernesgruen",
     "insta_acc2": ""
   },
@@ -233,7 +233,7 @@
     "insta_acc": "sv_merkur_06_oelsnitz",
     "insta_acc2": ""
   },
-  "SV MorgenrÃ¶the-Rautenkranz": {
+  "SV Morgenröthe-Rautenkranz": {
     "fileName": "SV_Morgenroethe-Rautenkranz",
     "place": "M-Rautenkranz",
     "insta_acc": "sv.morgenroethe_rautenkranz",
@@ -245,9 +245,9 @@
     "insta_acc": "sv_turbine_bergen",
     "insta_acc2": ""
   },
-  "TSG RuppertsgrÃ¼n": {
+  "TSG Ruppertsgrün": {
     "fileName": "TSG_Ruppertsgruen",
-    "place": "RuppertsgrÃ¼n",
+    "place": "Ruppertsgrün",
     "insta_acc": "tsgruppe1953",
     "insta_acc2": ""
   },
@@ -263,10 +263,10 @@
     "insta_acc": "vfbauerbach",
     "insta_acc2": ""
   },
-  "VfB GroÃŸfriesen": {
+  "VfB Großfriesen": {
     "fileName": "VfB_Grossfriesen",
-    "place": "GroÃŸfriesen",
-    "insta_acc": "vfb_groÃŸfriesen_1951",
+    "place": "Großfriesen",
+    "insta_acc": "vfb_großfriesen_1951",
     "insta_acc2": ""
   },
   "VfB Lengenfeld 1908": {
@@ -277,19 +277,19 @@
   },
   "VfB Nord Plauen": {
     "fileName": "VfB_Nord_Plauen",
-    "place": "H.-Sachs-StraÃŸe",
+    "place": "H.-Sachs-Straße",
     "insta_acc": "vfb.plauen.nord.e.v",
     "insta_acc2": ""
   },
-  "VfB Pausa-MÃ¼hltroff": {
+  "VfB Pausa-Mühltroff": {
     "fileName": "VfB_Pausa-Muehltroff",
-    "place": "MÃ¼hltroff",
+    "place": "Mühltroff",
     "insta_acc": "vfb_pausamuehltroff",
     "insta_acc2": ""
   },
-  "VfB SchÃ¶neck": {
+  "VfB Schöneck": {
     "fileName": "VfB_Schoeneck",
-    "place": "SchÃ¶neck",
+    "place": "Schöneck",
     "insta_acc": "vfbschoeneck",
     "insta_acc2": ""
   },
@@ -307,20 +307,44 @@
   },
   "VFC Reichenbach 96": {
     "fileName": "VFC_Reichenbach_96",
-    "place": "SchÃ¶ne Aussicht",
+    "place": "Schöne Aussicht",
     "insta_acc": "vfcreichenbach",
     "insta_acc2": ""
   },
-  "VfL ReumtengrÃ¼n": {
+  "VfL Reumtengrün": {
     "fileName": "VfL_Reumtengruen",
-    "place": "ReumtengrÃ¼n",
+    "place": "Reumtengrün",
     "insta_acc": "",
     "insta_acc2": ""
   },
   "VSC Mylau-Reichenbach": {
     "fileName": "VSC_Mylau-Reichenbach",
-    "place": "ReichbacherstraÃŸe",
+    "place": "Reichbacherstraße",
     "insta_acc": "vscmylaureichbach",
+    "insta_acc2": ""
+  },
+  "SC Markneukirchen": {
+    "fileName": "SC_Markneukirchen",
+    "place": "Markneukirchen",
+    "insta_acc": "",
+    "insta_acc2": ""
+  },
+  "SG Straßberg": {
+    "fileName": "SG_Strassberg",
+    "place": "Straßberg",
+    "insta_acc": "",
+    "insta_acc2": ""
+  },
+  "1. FC Ranch Plauen": {
+    "fileName": "1FC_Ranch_Plauen",
+    "place": "Neundorf",
+    "insta_acc": "",
+    "insta_acc2": ""
+  },
+  "Leubnitzer SV 1898": {
+    "fileName": "Leubnitzer_SV",
+    "place": "Leubnitz",
+    "insta_acc": "",
     "insta_acc2": ""
   }
 }

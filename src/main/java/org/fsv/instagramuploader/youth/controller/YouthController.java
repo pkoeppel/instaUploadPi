@@ -7,21 +7,13 @@ import org.fsv.instagramuploader.youth.pictureCreator.ResultsCreator;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 public class YouthController {
@@ -32,15 +24,12 @@ public class YouthController {
 		this.msc = msc;
 		this.rsc = rsc;
 	}
-	
-	@GetMapping("/download/youth/{pathName}/{fileName:.+}")
-	public ResponseEntity<?> downloadLocalFile(@PathVariable String pathName, @PathVariable String fileName) throws MalformedURLException {
-		Path path = Paths.get("save/youth/" + pathName + "/" + fileName);
-		Resource res = new UrlResource(path.toUri());
-		return ResponseEntity.ok()
-										.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + res.getFilename() + "\"")
-										.contentType(MediaType.parseMediaType("application/octet-stream"))
-										.body(res);
+
+	@SuppressWarnings("resource")
+	@GetMapping(value = "/download/youth/{pathName}/{fileName:.+}", produces= MediaType.IMAGE_JPEG_VALUE)
+	public @ResponseBody byte[] downloadLocalFile(@PathVariable String pathName, @PathVariable String fileName) throws IOException {
+		InputStream is = new FileInputStream("src/main/resources/save/youth/" + pathName + "/" + fileName);
+		return Objects.requireNonNull(is).readAllBytes();
 	}
 	
 	@RequestMapping("/createMatchFilesYouth")

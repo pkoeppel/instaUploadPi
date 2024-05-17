@@ -11,7 +11,9 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -57,7 +59,7 @@ public class ResultCreator {
 		String saveName = getClub.getClubDetails(mOpp).saveClubName();
 		int imgCount = 0;
 		String dir = date + "_" + mType + "_" + saveName;
-		File directory = new File("save/" + dir + "/Bilder");
+		File directory = new File("src/main/resources/save/" + dir + "/Bilder");
 		if (!directory.exists()) {
 			//noinspection ResultOfMethodCallIgnored
 			directory.mkdir();
@@ -70,6 +72,11 @@ public class ResultCreator {
 			ImageIO.write(img, "jpeg",fileToSave);
 			imgCount++;
 		}
+
+		BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/save/" + dir + "/report.txt"));
+		writer.write(fullReport);
+		writer.close();
+
 		h.deleteTempTxt(m, "men-games-result");
 		JSONObject result = new JSONObject();
 		result.put("fileDir", dir);

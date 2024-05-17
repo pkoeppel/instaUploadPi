@@ -31,9 +31,16 @@ public class Helper {
 	}
 	
 	public static int getC(JSONObject c, String val) {
-		double coord = (double) c.get(val);
-		return Double.valueOf(coord).intValue();
+		try {
+			double coord = (double) c.get(val);
+			return Double.valueOf(coord).intValue();
+		}
+		catch (ClassCastException e) {
+			long coord = (long) c.get(val);
+			return Long.valueOf(coord).intValue();
+		}
 	}
+
 	public static String wrapString(String string, int charWrap) {
 		int lastBreak = 0;
 		int nextBreak = charWrap;
